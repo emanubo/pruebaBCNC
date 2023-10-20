@@ -33,5 +33,33 @@ El proyecto utiliza las siguientes dependencias principales:
 - Jackson para la serialización/deserialización JSON
 - Project Lombok para simplificar la creación de modelos de datos
 
+## Pruebas
+
+### Pruebas Unitarias
+
+Se han implementado pruebas unitarias para asegurar el funcionamiento correcto de las componentes individuales del proyecto. A continuación, se detallan las pruebas unitarias disponibles:
+
+- `MyControllerTest`: Prueba la funcionalidad del controlador `MyController`. Verifica que el controlador responde correctamente a las solicitudes y proporciona datos válidos al usuario. Se utiliza Mockito para simular el servicio y verificar que el controlador devuelve la respuesta esperada.
+
+- `MyServiceTest`: Prueba la lógica del servicio `MyService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
+
+## Pruebas
+
+### Pruebas Unitarias
+
+Se han implementado pruebas unitarias para asegurar el funcionamiento correcto de las componentes individuales del proyecto. A continuación, se detallan las pruebas unitarias disponibles:
+
+- `MyControllerTest`: Prueba la funcionalidad del controlador `MyController`. Verifica que el controlador responde correctamente a las solicitudes y proporciona datos válidos al usuario. Se utiliza Mockito para simular el servicio y verificar que el controlador devuelve la respuesta esperada.
+
+- `MyServiceTest`: Prueba la lógica del servicio `MyService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
+
+### Pruebas de Integración
+
+Se han implementado pruebas de integración para verificar el funcionamiento del proyecto en su conjunto, incluyendo las solicitudes HTTP. A continuación, se describe la prueba de integración disponible:
+
+- `MyControllerIntegrationTest`: Prueba la integración del controlador `MyController` con un servidor web embebido. Realiza solicitudes HTTP al punto de acceso `/users/{id}` y verifica que se reciban respuestas válidas. Esta prueba asegura que el proyecto funcione correctamente en un entorno de ejecución real.
+
+Todas las pruebas se ejecutan automáticamente en un entorno de construcción y prueba, y son una parte fundamental del proceso de desarrollo para garantizar la calidad y fiabilidad del proyecto.
+
 ## Manuel Bohorquez
 
