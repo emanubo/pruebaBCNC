@@ -43,16 +43,6 @@ Se han implementado pruebas unitarias para asegurar el funcionamiento correcto d
 
 - `MyServiceTest`: Prueba la lógica del servicio `MyService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
 
-## Pruebas
-
-### Pruebas Unitarias
-
-Se han implementado pruebas unitarias para asegurar el funcionamiento correcto de las componentes individuales del proyecto. A continuación, se detallan las pruebas unitarias disponibles:
-
-- `MyControllerTest`: Prueba la funcionalidad del controlador `MyController`. Verifica que el controlador responde correctamente a las solicitudes y proporciona datos válidos al usuario. Se utiliza Mockito para simular el servicio y verificar que el controlador devuelve la respuesta esperada.
-
-- `MyServiceTest`: Prueba la lógica del servicio `MyService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
-
 ### Pruebas de Integración
 
 Se han implementado pruebas de integración para verificar el funcionamiento del proyecto en su conjunto, incluyendo las solicitudes HTTP. A continuación, se describe la prueba de integración disponible:
