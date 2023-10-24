@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.MyService;
+import com.example.demo.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -15,13 +15,13 @@ import java.util.concurrent.ExecutionException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MyControllerTest {
+class UserControllerTest {
 
     @InjectMocks
-    private MyController myController;
+    private UserController userController;
 
     @Mock
-    private MyService myService;
+    private UserService userService;
 
     @BeforeEach
     void setUp() {
@@ -39,9 +39,9 @@ class MyControllerTest {
 
         CompletableFuture<Map<String, Object>> userWithAlbumsAndPosts = CompletableFuture.completedFuture(userData);
 
-        Mockito.when(myService.getUserWithAlbumsAndPosts(userId)).thenReturn(userWithAlbumsAndPosts);
+        Mockito.when(userService.getUserWithAlbumsAndPosts(userId)).thenReturn(userWithAlbumsAndPosts);
 
-        CompletableFuture<Map<String, Object>> result = myController.getUserWithAlbumsAndPosts(userId);
+        CompletableFuture<Map<String, Object>> result = userController.getUserWithAlbumsAndPosts(userId);
 
         // Verifica que el resultado del controlador coincida con el valor simulado por el servicio
         assertEquals(userWithAlbumsAndPosts.get(), result.get());

@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 @Service
-public class MyService {
+public class UserService {
     private final WebClient webClient;
 
-    public MyService(WebClient.Builder webClientBuilder) {
+    public UserService(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder.baseUrl("https://jsonplaceholder.typicode.com").build();
     }
 

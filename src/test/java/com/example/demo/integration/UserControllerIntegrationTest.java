@@ -11,7 +11,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class MyControllerIntegrationTest {
+class UserControllerIntegrationTest {
 
     @LocalServerPort
     private int port;
