@@ -4,8 +4,8 @@ Spring Boot que utiliza el framework Spring WebFlux para realizar operaciones as
 ## Estructura del Proyecto
 
 - `MyConfiguration.java`: Configuración de Spring Boot que define un bean de WebClient.Builder.
-- `MyService.java`: Servicio que utiliza WebClient para recuperar datos de usuarios, álbumes y publicaciones.
-- `MyController.java`: Controlador que expone un punto de acceso para obtener usuarios con álbumes y publicaciones.
+- `UserService.java`: Servicio que utiliza WebClient para recuperar datos de usuarios, álbumes y publicaciones.
+- `UserController.java`: Controlador que expone un punto de acceso para obtener usuarios con álbumes y publicaciones.
 - `Album.java`: Clase de modelo para representar información de álbum.
 - `Post.java`: Clase de modelo para representar información de publicaciones.
 - `User.java`: Clase de modelo para representar información de usuarios.
@@ -39,15 +39,15 @@ El proyecto utiliza las siguientes dependencias principales:
 
 Se han implementado pruebas unitarias para asegurar el funcionamiento correcto de las componentes individuales del proyecto. A continuación, se detallan las pruebas unitarias disponibles:
 
-- `MyControllerTest`: Prueba la funcionalidad del controlador `MyController`. Verifica que el controlador responde correctamente a las solicitudes y proporciona datos válidos al usuario. Se utiliza Mockito para simular el servicio y verificar que el controlador devuelve la respuesta esperada.
+- `UserControllerTest`: Prueba la funcionalidad del controlador `UserController`. Verifica que el controlador responde correctamente a las solicitudes y proporciona datos válidos al usuario. Se utiliza Mockito para simular el servicio y verificar que el controlador devuelve la respuesta esperada.
 
-- `MyServiceTest`: Prueba la lógica del servicio `MyService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
+- `UserServiceTest`: Prueba la lógica del servicio `UserService`. Asegura que el servicio pueda obtener datos de usuarios, álbumes y publicaciones y combinarlos en un solo resultado. Se utilizan simulaciones de WebClient y Mockito para controlar el flujo de datos.
 
 ### Pruebas de Integración
 
 Se han implementado pruebas de integración para verificar el funcionamiento del proyecto en su conjunto, incluyendo las solicitudes HTTP. A continuación, se describe la prueba de integración disponible:
 
-- `MyControllerIntegrationTest`: Prueba la integración del controlador `MyController` con un servidor web embebido. Realiza solicitudes HTTP al punto de acceso `/users/{id}` y verifica que se reciban respuestas válidas. Esta prueba asegura que el proyecto funcione correctamente en un entorno de ejecución real.
+- `UserControllerIntegrationTest`: Prueba la integración del controlador `UserController` con un servidor web embebido. Realiza solicitudes HTTP al punto de acceso `/users/{id}` y verifica que se reciban respuestas válidas. Esta prueba asegura que el proyecto funcione correctamente en un entorno de ejecución real.
 
 Todas las pruebas se ejecutan automáticamente en un entorno de construcción y prueba, y son una parte fundamental del proceso de desarrollo para garantizar la calidad y fiabilidad del proyecto.
 
